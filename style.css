@@ -744,6 +744,11 @@ header ul li:hover{
     padding-top: 150px;
     background-color: rgb(48, 48, 47);
 }
+.expSection{
+  margin-top: -80px;
+  padding-top: 150px;
+  background-color: rgb(48, 48, 47);
+}
 #service{
     width: 70%;
     margin: auto;
@@ -1053,4 +1058,88 @@ header ul li:hover{
     from{
         transform: translateY( -100%);
     }
+}
+
+/* Experience Section */
+#experienceSection {
+  padding: 50px 20px;
+  background-color: rgb(48, 48, 47);
+  text-align: center;
+}
+
+#experienceSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.experienceBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.job {
+  width: 80%;
+  padding: 20px;
+  background: rgb(48, 48, 47);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.job h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.job h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.job p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.job ul {
+  list-style: disc;
+  margin: 10px 20px;
+  padding: 0;
+  color: #ffffff;
+}
+
+.job ul li {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive Styles for Experience Section */
+@media (max-width: 768px) {
+  .job {
+      width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #experienceSection h2 {
+      font-size: 2rem;
+  }
+
+  .job h3 {
+      font-size: 1.2rem;
+  }
+
+  .job h4 {
+      font-size: 1rem;
+  }
+
+  .job ul li {
+      font-size: 0.9rem;
+  }
 }
