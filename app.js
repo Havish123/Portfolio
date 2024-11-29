@@ -43,7 +43,7 @@ window.addEventListener("scroll", ()=>{
     var pic1 = document.querySelector(".Background-Image");
     var pic2 = document.querySelector(".Background-Image1");
     if(currentScrollPos > 130){
-        head.style.backgroundColor = "rgb(22, 22, 22)";    
+        head.style.backgroundColor = "#00abe4";    
     }
     else{
         head.style.backgroundColor = "transparent";

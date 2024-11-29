@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Rubik+Scribble&display=swap');
 :root {
   /* Primary Colors */
-  --text-primary: #FFFACD; /* For main text, headings */
+  --text-primary: rgba(30, 55, 90, 0.7); /* For main text, headings */
   --text-secondary: #D4D4D4; /* For secondary text or paragraphs */
   --text-accent: #00CED1;
+  --bg-color: transparent;
+  --card-color: #ffffff;
+  --card-text:#1e375a;
+  --btn-color:#2364d2;
+  --nav-bgcolor:#00abe4;
 }
 html{
     scroll-behavior: smooth;
@@ -616,7 +621,7 @@ header ul li:hover{
 } 
 .aboutContent{
     width: 100%;
-    background-color: rgb(48, 48, 47);
+    background-color: var(--bg-color);
     padding-top: 1px;
 }
 #about{
@@ -768,12 +773,12 @@ header ul li:hover{
 .serviceSection{
     margin-top: -80px;
     padding-top: 150px;
-    background-color: rgb(48, 48, 47);
+    background-color: var(--bg-color);
 }
 .expSection{
   margin-top: -80px;
   padding-top: 150px;
-  background-color: rgb(48, 48, 47);
+  background-color: var(--bg-color);
 }
 #service{
     width: 70%;
@@ -791,7 +796,7 @@ header ul li:hover{
 .serviceBox div, .projectBox div{
     width: 380px;
     height: 380px;
-    background-color: rgb(62, 61, 61);
+    background-color: var(--card-color);
     box-sizing: border-box;
     border-radius: 20px;
     overflow: hidden;
@@ -809,7 +814,7 @@ header ul li:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color:  var(--text-primary);
+    color:  var(--card-text);
     text-align: justify;
     font-family: 'Amaranth', sans-serif;
 }
@@ -864,7 +869,7 @@ header ul li:hover{
     height: 320px;
     display: flex;
     justify-content: center;
-    background-color:  rgb(22, 22, 22);
+    background-color:  var(--bg-color);
     color:  var(--text-primary);
     overflow: hidden;
 }
@@ -912,7 +917,7 @@ header ul li:hover{
   color: rgb(18, 116, 201);
 }
 .contactSection div ul li:hover{
-    filter: drop-shadow(0 0 15px  var(--text-primary));
+    filter: drop-shadow(0 0 15px  var(--card-text));
     transform: scale(1.5);
 }
 @media only screen and (max-width: 1100px){
@@ -932,7 +937,7 @@ header ul li:hover{
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: rgb(37, 38, 38);
+        background-color: var(--nav-bgcolor);
         z-index: 1;
         animation: navAnimation 0.7s ease-in-out;
     }
@@ -990,7 +995,7 @@ header ul li:hover{
         position: absolute;
         top: 40px;
         right: 0;
-        background-color: rgb(37, 38, 38);
+        background-color: var(--nav-bgcolor);
         z-index: 1;
         animation: navAnimation 0.7s ease-in-out;
     }
@@ -1114,7 +1119,7 @@ header ul li:hover{
 /* Experience Section */
 #experienceSection {
   padding: 50px 20px;
-  background-color: rgb(48, 48, 47);
+  background-color: var(--bg-color);
   text-align: center;
 }
 
@@ -1128,7 +1133,7 @@ header ul li:hover{
   margin-top: 40px;
 }
 .experienceBox .job{
-  background-color: rgb(62, 61, 61);
+  background-color: var(--card-color);
 }
 
 /* Job container styles */
@@ -1173,7 +1178,7 @@ header ul li:hover{
 .job {
   width: 80%;
   padding: 20px;
-  background: rgb(48, 48, 47);
+  background: var(--bg-color);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -1201,13 +1206,14 @@ header ul li:hover{
   list-style: disc;
   margin: 10px 20px;
   padding: 0;
-  color:  var(--text-primary);
+  color:  var(--card-text);
 }
 
 .job ul li {
   margin-bottom: 5px;
   font-size: 1rem;
   line-height: 1.5;
+  color:  var(--card-text);
 }
 
 /* Responsive Styles for Experience Section */
@@ -1232,5 +1238,33 @@ header ul li:hover{
 
   .job ul li {
       font-size: 0.9rem;
+  }
+}
+
+.profilepic {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 576px) {
+  .profilepic{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .profilepic {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .profile-img {
+    width: 450px;
+    height: 450px;
   }
 }
