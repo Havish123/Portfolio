@@ -1251,20 +1251,20 @@ header ul li:hover{
 @media (min-width: 576px) {
   .profilepic{
     width: 250px;
-    height: 250px;
+    height: 350px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width:991px) {
   .profilepic {
     width: 400px;
-    height: 400px;
+    height: 500px;
   }
 }
 
 @media (min-width: 992px) {
   .profile-img {
     width: 450px;
-    height: 450px;
+    height: 550px;
   }
 }
