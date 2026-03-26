@@ -1,300 +1,472 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Havishwaran - J</title>
+    <meta name="description" content="Portfolio of Havishwaran J, a full stack developer specializing in .NET Core, React, TypeScript, Docker, and modern business application delivery through PJK Tech Solutions.">
+    <title>Havishwaran J | Full Stack Developer</title>
     <link rel="icon" href="images/Logo.svg">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Merienda:wght@300&family=Montserrat+Alternates&family=Poor+Story&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/4498d51c36.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (() => {
+            try {
+                const storedTheme = localStorage.getItem("portfolio-theme");
+                const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                document.documentElement.dataset.theme = storedTheme || (prefersDark ? "dark" : "light");
+            } catch (error) {
+                document.documentElement.dataset.theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+        })();
+    </script>
 </head>
 <body>
-    <img class="Background-Image1" src="images/bglight1.svg" alt="Background-Image">
-    <img class="Background-Image" src="images/bglight2.svg" alt="Background-Image1">
-    <div class="banter-loader" id="banter-loader">
-        <div class="banter-loader__box"></div>
-        <div class="banter-loader__box"></div>
-        <div class="banter-loader__box"></div>
-        <div class="banter-loader__box"></div>
-        <div class="banter-loader__box"></div>
-        <div class="banter-loader__box"></div>
-        <div class="banter-loader__box"></div>
-        <div class="banter-loader__box"></div>
-        <div class="banter-loader__box"></div>
-      </div>
-    <header id="head">
-        <!-- <img src="images/profile1.png" class="logo"> -->
-        <nav>
-            <div class="menu" onclick="myFunction(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-            <ul id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#experienceSection">Experience</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container text-center my-4">
-        <img src="images/havis.png" alt="Havishwaran" class="profilepic">
-        <div class="intro">
-            <div class="introContent">
-                <div>
-                    <p data-aos="fade-up-left" data-aos-duration="1500">Hey There!, I'm Havishwaran</p>
-                    <p data-aos="fade-down-right" data-aos-duration="1500">Full Stack Developer | .Net Core</p> 
-                </div>
-                <p>Passionate Developer</p>
+    <header class="site-header" id="top">
+        <div class="shell nav-shell">
+            <a class="brand" href="#home" aria-label="Go to home section">
+                <span class="brand-mark">HJ</span>
+                <span class="brand-copy">
+                    <span class="brand-name">Havishwaran J</span>
+                    <span class="brand-subtitle">PJK Tech Solutions</span>
+                </span>
+            </a>
+
+            <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#company">Company</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-controls">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+                    <span class="theme-toggle__label">Dark mode</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
-    </div>
-   
-   
-    <div class="aboutContent">
-        <section id="about">
-            <div class="title" data-aos="fade-right" data-aos-duration="1000">
-                <div>
-                    <p>About Me</p>
+    </header>
+
+    <main>
+        <section class="hero section" id="home">
+            <div class="shell hero-grid">
+                <div class="hero-copy" data-reveal>
+                    <p class="kicker">Available for freelance, consulting, and product-focused development</p>
+                    <h1>Full stack applications that are built for real business use, not just for screenshots.</h1>
+                    <p class="hero-lead">
+                        I am Havishwaran J, a full stack developer working across .NET Core backend systems, React and TypeScript frontends,
+                        integrations, deployment, and long-term product maintenance. Alongside enterprise roles, I have also delivered independent
+                        client work through PJK Tech Solutions.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projects">View Projects</a>
+                        <a class="button button-secondary" href="mailto:havishwaran@pjktechsolutions.com">Start a Conversation</a>
+                    </div>
+                    <ul class="hero-highlights">
+                        <li>ASP.NET Core APIs, business logic, migrations, and integrations</li>
+                        <li>React and TypeScript frontends for dashboards, portals, and admin tools</li>
+                        <li>Docker, CI/CD, hosting, and support for reliable production delivery</li>
+                    </ul>
                 </div>
-                <p>About Me</p>
+
+                <div class="hero-panel" data-reveal>
+                    <article class="hero-card">
+                        <div class="portrait-wrap">
+                            <img src="images/havis.png" alt="Portrait of Havishwaran J">
+                        </div>
+                        <div class="hero-card__body">
+                            <p class="card-label">Current focus</p>
+                            <h2>Modern business apps with strong architecture underneath.</h2>
+                            <p>
+                                I enjoy building products that balance performance, maintainability, and clean user experience, whether the work is
+                                for an internal enterprise team or an independent client engagement.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="floating-card">
+                        <p class="card-label">Core stack</p>
+                        <ul class="tag-list">
+                            <li>.NET Core</li>
+                            <li>React</li>
+                            <li>TypeScript</li>
+                            <li>C#</li>
+                            <li>Docker</li>
+                            <li>MySQL</li>
+                            <li>CI/CD</li>
+                            <li>Hosting</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
-            <div class="aboutText" data-aos="fade-up" data-aos-duration="1500">
-                <p>&ensp;&ensp;&ensp;&ensp;Hello World! I'm Havishwaran J, a passionate full-stack developer with a strong foundation 
-                    in .NET and .NET Core for building robust web applications. Proficient in C#, JavaScript, HTML, and CSS,
-                     I bring ideas to life with clean and efficient code. My toolkit extends to Flutter basics,
-                      server hosting, Docker setup for .NET Core projects, and seamless CI/CD integration with Docker. 
-                      With a knack for problem-solving and a commitment to innovation, I strive to transform challenges
-                       into opportunities, continuously evolving in the ever-dynamic tech landscape. Each project is a 
-                       stepping stone, and my journey is all about crafting impactful digital solutions.</p>
-            </div>
-            <div class="skills">
-                <p data-aos="fade-left" data-aos-duration="1500">Development Skills</p>
-                <ul id="skillIcons" class="row justify-content-center">
-                    <li class="col-4 col-sm-3 col-md-2" data-aos="fade-up" data-aos-duration="300">
-                        <i class="fa-brands fa-cuttlefish"></i>
-                    </li> <!-- C# -->
-                    <li class="col-4 col-sm-3 col-md-2" data-aos="fade-up" data-aos-duration="600">
-                        <i class="fa-brands fa-js"></i>
-                    </li> <!-- JavaScript -->
-                    <li class="col-4 col-sm-3 col-md-2" data-aos="fade-up" data-aos-duration="900">
-                        <i class="fa-brands fa-html5"></i>
-                    </li> <!-- HTML -->
-                    <li class="col-4 col-sm-3 col-md-2" data-aos="fade-up" data-aos-duration="1200">
-                        <i class="fa-brands fa-css3-alt"></i>
-                    </li> <!-- CSS -->
-                    <li class="col-4 col-sm-3 col-md-2" data-aos="fade-up" data-aos-duration="1500">
-                        <i class="fa-brands fa-docker"></i>
-                    </li> <!-- Docker -->
-                    <li class="col-4 col-sm-3 col-md-2" data-aos="fade-up" data-aos-duration="1800">
-                        <i class="fa-brands fa-github"></i>
-                    </li> <!-- GitHub -->
-                    <li class="col-4 col-sm-3 col-md-2" data-aos="fade-up" data-aos-duration="2100">
-                        <i class="fa-solid fa-server"></i>
-                    </li> <!-- Server Hosting -->
-                    <li class="col-4 col-sm-3 col-md-2" data-aos="fade-up" data-aos-duration="2400">
-                        <i class="fa-solid fa-mobile-screen"></i>
-                    </li> <!-- Flutter basic -->
-                </ul>
-            </div>
-            
-            
-        </section>
-    </div>
-    <div class="serviceSection">
-        <section id="service">
-            <div class="title" data-aos="fade-right" data-aos-duration="1500">
-                <div>
-                    <p>Services</p>
-                </div>
-                <p>Services</p>
-            </div>
-            <div class="serviceBox">
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img class="Development" src="images/app-development.png" alt="Web Development">
-                        <p class="p1">Web Development</p>
-                        <p class="p2">I specialize in building scalable, high-performance web applications using .NET Core and C#. Let’s create responsive and modern websites tailored to your unique business requirements.</p>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img src="images/docker.png" alt="Docker Integration">
-                        <p class="p1">Docker Integration</p>
-                        <p class="p2">Streamline your application deployment with Docker. I set up Docker environments for seamless CI/CD integration, ensuring efficient and reliable software delivery pipelines.</p>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img class="Development" src="images/serverhost.png" alt="Server Hosting">
-                        <p class="p1">Server Hosting</p>
-                        <p class="p2">With expertise in server hosting and deployment, I ensure your applications are securely hosted and optimized for performance, providing a hassle-free hosting experience.</p>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img src="images/Github.png" alt="GitHub Workflow">
-                        <p class="p1">GitHub Workflow</p>
-                        <p class="p2">Enhance your project management with my GitHub expertise. From branching strategies to pull requests, I bring efficient version control practices to your development process.</p>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img src="images/flutterico.png" alt="Flutter Development">
-                        <p class="p1">Flutter Development</p>
-                        <p class="p2">Leverage my basic knowledge of Flutter to build lightweight and efficient mobile applications, perfect for small-scale app projects and prototypes.</p>
-                    </div>
-                </div>
+
+            <div class="shell stat-grid" data-reveal>
+                <article class="stat-card">
+                    <strong>3</strong>
+                    <span>product companies worked with</span>
+                </article>
+                <article class="stat-card">
+                    <strong>6</strong>
+                    <span>featured projects across industries</span>
+                </article>
+                <article class="stat-card">
+                    <strong>.NET + React</strong>
+                    <span>end-to-end product delivery</span>
+                </article>
+                <article class="stat-card">
+                    <strong>PJK</strong>
+                    <span>freelance and consulting identity</span>
+                </article>
             </div>
         </section>
-    </div>
-    <div class="expSection">
-        <section id="experienceSection">
-            <div class="title" data-aos="fade-right" data-aos-duration="1500">
-                <div>
-                    <p>Experience</p>
+
+        <section class="section" id="about">
+            <div class="shell">
+                <div class="section-heading" data-reveal>
+                    <p class="section-tag">About</p>
+                    <h2>Enterprise experience with the ownership mindset of an independent builder.</h2>
+                    <p>
+                        I like taking ideas from rough concept to stable release. That includes system design, API development, UI implementation,
+                        third-party integrations, debugging, deployment, and the practical support work that comes after launch.
+                    </p>
                 </div>
-                <p>Experience</p>
+
+                <div class="about-grid">
+                    <article class="card prose-card" data-reveal>
+                        <h3>What I bring</h3>
+                        <p>
+                            My background combines full-time engineering roles with selective freelance delivery. I have worked on enterprise software,
+                            internal systems, government platforms, and business applications where reliability and maintainability matter.
+                        </p>
+                        <p>
+                            That makes me a strong fit for admin dashboards, custom portals, workflow tools, product MVPs, and long-running business
+                            software that needs both solid code and steady ownership.
+                        </p>
+                    </article>
+
+                    <article class="card capability-card" data-reveal>
+                        <h3>Focus areas</h3>
+                        <div class="capability-list">
+                            <div>
+                                <span>Backend</span>
+                                <p>ASP.NET Core, C#, REST APIs, business logic, integrations, and performance-conscious implementation.</p>
+                            </div>
+                            <div>
+                                <span>Frontend</span>
+                                <p>React, TypeScript, JavaScript, HTML, and CSS for responsive interfaces that feel clean and purposeful.</p>
+                            </div>
+                            <div>
+                                <span>Delivery</span>
+                                <p>Docker, CI/CD setup, server hosting, release support, and production troubleshooting.</p>
+                            </div>
+                            <div>
+                                <span>Extra range</span>
+                                <p>C++, MySQL, GitHub workflows, third-party APIs, and Flutter basics for lightweight mobile needs.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <div class="container">
-                <div class="experienceBox row justify-content-center">
-                    <div class="job col-12 col-md-12 d-flex justify-content-center mb-4">
-                        <div class="jobContent d-flex flex-column flex-md-row align-items-center">
-                            <img src="images/coatslogo.svg" alt="Zoho Logo" width="22%" class="companyLogo mb-3 mb-md-0 mr-md-4">
-                            <div class="jobDetails text-left">
+        </section>
+
+        <section class="section" id="expertise">
+            <div class="shell">
+                <div class="section-heading" data-reveal>
+                    <p class="section-tag">Expertise</p>
+                    <h2>How I help teams and clients ship better products.</h2>
+                    <p>
+                        My work usually sits at the intersection of product development, technical ownership, and dependable delivery.
+                    </p>
+                </div>
+
+                <div class="service-grid">
+                    <article class="card service-card" data-reveal>
+                        <span class="service-number">01</span>
+                        <h3>Full Stack Web Development</h3>
+                        <p>Custom web applications using .NET Core, C#, React, and TypeScript for business workflows, dashboards, and customer-facing tools.</p>
+                    </article>
+                    <article class="card service-card" data-reveal>
+                        <span class="service-number">02</span>
+                        <h3>Frontend Modernization</h3>
+                        <p>Responsive interfaces with cleaner UX, faster workflows, reusable components, and designs that work well in both light and dark themes.</p>
+                    </article>
+                    <article class="card service-card" data-reveal>
+                        <span class="service-number">03</span>
+                        <h3>APIs and Integrations</h3>
+                        <p>Secure APIs, external service integrations, data exchange, validation flows, and backend systems that support real business operations.</p>
+                    </article>
+                    <article class="card service-card" data-reveal>
+                        <span class="service-number">04</span>
+                        <h3>Deployment and Support</h3>
+                        <p>Dockerized environments, CI/CD setup, hosting, deployment troubleshooting, and support that helps products stay stable after release.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <div class="shell">
+                <div class="section-heading" data-reveal>
+                    <p class="section-tag">Experience</p>
+                    <h2>Product engineering across enterprise systems and custom software delivery.</h2>
+                </div>
+
+                <div class="timeline">
+                    <article class="card timeline-item" data-reveal>
+                        <div class="timeline-head">
+                            <div>
+                                <span class="timeline-period">Mar 2025 - Present</span>
                                 <h3>Software Engineer - Colour Systems</h3>
-                                <h4>Madura Coats, Madurai, Tamil Nadu</h4>
-                                <p><strong>March 2025 – Present</strong></p>
-                                <ul>
-                                    <li>Develop and maintain Windows applications for colour management, formulation, and matching.</li>
-                                    <li>Implement performance improvements and new features based on industry requirements.</li>
-                                    <li>Ensure seamless data exchange between software and production systems.</li>
-                                </ul>
+                                <p class="timeline-company">Madura Coats, Madurai, Tamil Nadu</p>
                             </div>
+                            <img class="timeline-logo" src="images/coatslogo.svg" alt="Madura Coats logo">
                         </div>
-                    </div>
-                    <div class="job col-12 col-md-12 d-flex justify-content-center mb-4">
-                        <div class="jobContent d-flex flex-column flex-md-row align-items-center">
-                            <img src="images/zohologo.svg" alt="Zoho Logo" width="22%" class="companyLogo mb-3 mb-md-0 mr-md-4">
-                            <div class="jobDetails text-left">
+                        <p>Building and improving Windows applications used for colour management, formulation, matching, and production system data exchange.</p>
+                    </article>
+
+                    <article class="card timeline-item" data-reveal>
+                        <div class="timeline-head">
+                            <div>
+                                <span class="timeline-period">Jun 2024 - Mar 2025</span>
                                 <h3>Member Technical Staff</h3>
-                                <h4>Zoho Corporation, Chennai, Tamil Nadu</h4>
-                                <p><strong>June 2024 – March 2025</strong></p>
-                                <ul>
-                                    <li>Developed high-performance C++ modules, focusing on system optimization and scalability.</li>
-                                    <li>Actively involved in code reviews and contributed to best practices for code quality and internal documentation.</li>
-                                </ul>
+                                <p class="timeline-company">Zoho Corporation, Chennai, Tamil Nadu</p>
                             </div>
+                            <img class="timeline-logo" src="images/zohologo.svg" alt="Zoho logo">
                         </div>
-                    </div>
-                    <div class="job col-12 col-md-12 d-flex justify-content-center mb-4">
-                        <div class="jobContent d-flex flex-column flex-md-row align-items-center">
-                            <img src="images/impigerlogo.jpg" alt="Impiger Logo" width="22%" class="companyLogo mb-3 mb-md-0 mr-md-4">
-                            <div class="jobDetails text-left">
+                        <p>Worked on high-performance C++ modules with a focus on optimization, scalability, code quality, and engineering best practices.</p>
+                    </article>
+
+                    <article class="card timeline-item" data-reveal>
+                        <div class="timeline-head">
+                            <div>
+                                <span class="timeline-period">Feb 2022 - May 2024</span>
                                 <h3>Engineer</h3>
-                                <h4>Impiger Technologies Pvt Ltd, Chennai, Tamil Nadu</h4>
-                                <p><strong>Feb 2022 – May 2024</strong></p>
-                                <ul>
-                                    <li>Designed and implemented full-stack web applications using .NET Core, ASP.NET, MVC, and other technologies.</li>
-                                    <li>Worked on client-facing projects, including deployment, troubleshooting, and providing technical support.</li>
-                                    <li>Successfully integrated third-party APIs and external services into various applications.</li>
-                                    <li>Contributed to CI/CD pipelines and ensured smooth deployment processes for multiple applications.</li>
-                                </ul>
+                                <p class="timeline-company">Impiger Technologies Pvt Ltd, Chennai, Tamil Nadu</p>
                             </div>
+                            <img class="timeline-logo" src="images/impigerlogo.jpg" alt="Impiger Technologies logo">
                         </div>
-                    </div>
+                        <p>Delivered full stack applications with .NET Core, ASP.NET MVC, client integrations, deployment support, and troubleshooting for multiple production projects.</p>
+                    </article>
                 </div>
-            </div>
-            
-            
-        </section>
-    </div>
-    
-    
-    
-    <div class="projectSection">
-        <section id="project">
-            <div class="title" data-aos="fade-right" data-aos-duration="1500">
-                <div>
-                    <p>Projects</p>
-                </div>
-                <p>Projects</p>
-            </div>
-            <div class="projectBox">
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img class="Development" src="images/tnsand.webp" alt="TN Sand Project">
-                        <p class="p1">TN Sand Project</p>
-                        <p class="p2">Led the migration of the Tamil Nadu River Sand Supply system from .NET to .NET Core, improving scalability and performance. Developed features for online booking, distribution management, and real-time tracking of sand deliveries for government clients.</p>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img class="Development" src="images/sauda.webp" alt="Fortune Sauda">
-                        <p class="p1">Fortune Sauda</p>
-                        <p class="p2">Designed and developed a sales and stock management system for Adani Wilmar using .NET, enabling financial operations and real-time data reporting. Implemented performance optimizations to enhance user experience.</p>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img class="Development" src="images/lant.jpg" alt="L&T Valves">
-                        <p class="p1">L&T Valves</p>
-                        <p class="p2">Developed QR code generation and user management functionality, enhancing product authenticity tracking. Contributed to system deployment and hosting for seamless business integration through web and mobile applications.</p>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img class="Development" src="images/aai.png" alt="Airport Authority Project">
-                        <p class="p1">Airport Authority Project</p>
-                        <p class="p2">Built a ticket verification system for Chennai Airport, improving passenger management by scanning and validating tickets. Integrated airline data to optimize operations for gate personnel.</p>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img class="Development" src="images/vislogo1.png" alt="VIS">
-                        <p class="p1">VIS</p>
-                        <p class="p2">Developed a React web application with a .NET Core backend and MySQL database, hosted on Docker with CI/CD integration. Created a platform for non-binary individuals to connect with NGOs via WebRTC-powered calls, ensuring privacy.</p>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-in" data-aos-duration="1500">
-                    <div>
-                        <img class="Development" src="images/fitlogo.png" alt="Fitertz">
-                        <p class="p1">Fitertz</p>
-                        <p class="p2">Built a full-stack .NET Core web application for gym owners to manage gyms, clients, and customizable plans. Integrated workout management, PhonePe payment gateway, and user claims handling for seamless client experiences.</p>
-                    </div>
-                </div>
-            </div>
-            <p class="bottomP" data-aos="fade-up" data-aos-duration="1000"><a href="https://github.com/Havish123" target="_blank">Visit Github to view more</a></p>
-        </section>
-    </div>
-    
-    <div class="contactSection">
-        <section id="contact">
-            <div data-aos="fade-up" data-aos-duration="1500">
-                <p>The door to communication is always open. Reach out, and let's make things happen!</p>
-                <h1>Contacts</h1>
-                <ul>
-                    <li><a href="tel:+919655390115"><i class="fa-solid fa-phone"></i></a></li>
-                    <li><a href="mailto:havishwaran3110@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-                    <li><a href="https://www.instagram.com/havishwaran/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://github.com/Havish123" target="_blank"><i class="fa-brands fa-square-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/havishwaran-jeyakumar-97768818b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                </ul>
-                <p>&copy;2024, Havishwaran. All Rights Reserved.<br>Designed By Havishwaran</p>
             </div>
         </section>
-    </div>
-    <script>
-        AOS.init();
-      </script>
-<script src="app.js"></script>
+
+        <section class="section" id="projects">
+            <div class="shell">
+                <div class="section-heading" data-reveal>
+                    <p class="section-tag">Projects</p>
+                    <h2>Selected work across government, enterprise, and product-oriented builds.</h2>
+                    <p>These projects reflect the mix of backend engineering, frontend implementation, deployment ownership, and business problem solving that I enjoy most.</p>
+                </div>
+
+                <div class="project-grid">
+                    <article class="card project-card" data-reveal>
+                        <div class="project-media">
+                            <img src="images/tnsand.webp" alt="TN Sand project preview">
+                        </div>
+                        <div class="project-body">
+                            <h3>TN Sand Project</h3>
+                            <p>Migrated the Tamil Nadu River Sand Supply platform from .NET to .NET Core with improvements in scalability, performance, booking flow, and operational tracking.</p>
+                            <ul class="tag-list">
+                                <li>.NET Core</li>
+                                <li>Migration</li>
+                                <li>GovTech</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="card project-card" data-reveal>
+                        <div class="project-media">
+                            <img src="images/sauda.webp" alt="Fortune Sauda project preview">
+                        </div>
+                        <div class="project-body">
+                            <h3>Fortune Sauda</h3>
+                            <p>Built a sales and stock management system for Adani Wilmar with strong reporting support, financial workflows, and performance improvements for smoother operations.</p>
+                            <ul class="tag-list">
+                                <li>.NET</li>
+                                <li>Sales Ops</li>
+                                <li>Reporting</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="card project-card" data-reveal>
+                        <div class="project-media">
+                            <img src="images/lant.jpg" alt="L and T Valves project preview">
+                        </div>
+                        <div class="project-body">
+                            <h3>L&amp;T Valves</h3>
+                            <p>Delivered QR code generation, user management, and deployment support to strengthen product authenticity tracking across web and mobile experiences.</p>
+                            <ul class="tag-list">
+                                <li>QR Workflows</li>
+                                <li>Deployment</li>
+                                <li>Business Tools</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="card project-card" data-reveal>
+                        <div class="project-media">
+                            <img src="images/aai.png" alt="Airport Authority project preview">
+                        </div>
+                        <div class="project-body">
+                            <h3>Airport Authority Project</h3>
+                            <p>Created a ticket verification workflow for Chennai Airport to improve gate-side passenger validation and reduce friction in operational processes.</p>
+                            <ul class="tag-list">
+                                <li>Verification</li>
+                                <li>Airport Ops</li>
+                                <li>Integration</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="card project-card" data-reveal>
+                        <div class="project-media">
+                            <img src="images/vislogo1.png" alt="VIS project preview">
+                        </div>
+                        <div class="project-body">
+                            <h3>VIS</h3>
+                            <p>Built a React frontend with a .NET Core backend and MySQL database, deployed with Docker and CI/CD, for a privacy-conscious support platform with WebRTC communication.</p>
+                            <ul class="tag-list">
+                                <li>React</li>
+                                <li>.NET Core</li>
+                                <li>Docker</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="card project-card" data-reveal>
+                        <div class="project-media">
+                            <img src="images/fitlogo.png" alt="Fitertz project preview">
+                        </div>
+                        <div class="project-body">
+                            <h3>Fitertz</h3>
+                            <p>Created a full stack platform for gym management with plans, workout handling, claims, and PhonePe payment integration for a smoother business workflow.</p>
+                            <ul class="tag-list">
+                                <li>.NET Core</li>
+                                <li>Payments</li>
+                                <li>SaaS</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="centered-action" data-reveal>
+                    <a class="button button-secondary" href="https://github.com/Havish123" target="_blank" rel="noreferrer">View More on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="company">
+            <div class="shell">
+                <div class="section-heading" data-reveal>
+                    <p class="section-tag">Company</p>
+                    <h2>PJK Tech Solutions is where I package independent delivery and client-focused execution.</h2>
+                    <p>
+                        It represents the freelance and consulting side of my work: practical software delivery for businesses that want a capable
+                        developer partner without the overhead of a large agency process.
+                    </p>
+                </div>
+
+                <div class="company-grid">
+                    <article class="card company-story" data-reveal>
+                        <h3>What PJK Tech Solutions stands for</h3>
+                        <p>
+                            I use PJK Tech Solutions for selective independent projects, product support, and software consulting. The goal is simple:
+                            understand the business need, ship something dependable, and stay involved until the solution is actually useful.
+                        </p>
+                        <p>
+                            That can mean building a custom business application, modernizing an old interface, creating a new admin portal, or helping
+                            a team with deployment and production readiness.
+                        </p>
+                        <p>
+                            Company website:
+                            <a href="https://www.pjktechsolutions.com" target="_blank" rel="noreferrer">www.pjktechsolutions.com</a><br>
+                            Company email:
+                            <a href="mailto:havishwaran@pjktechsolutions.com">havishwaran@pjktechsolutions.com</a>
+                        </p>
+                    </article>
+
+                    <article class="card offer-card" data-reveal>
+                        <h3>What I can offer through it</h3>
+                        <ul class="offer-list">
+                            <li>Custom web applications for internal or customer-facing workflows</li>
+                            <li>React and TypeScript frontend upgrades for older portals</li>
+                            <li>.NET Core API development, integrations, and business logic implementation</li>
+                            <li>Docker, hosting, deployment, and post-launch technical support</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="shell">
+                <div class="section-heading" data-reveal>
+                    <p class="section-tag">Contact</p>
+                    <h2>Let us build something useful, scalable, and ready for production.</h2>
+                    <p>I am open to full-time opportunities, freelance projects, consulting conversations, and collaborations through PJK Tech Solutions.</p>
+                </div>
+
+                <div class="contact-layout">
+                    <article class="card contact-copy" data-reveal>
+                        <h3>Best fit</h3>
+                        <p>
+                            Reach out if you need a developer who can handle backend architecture, frontend implementation, deployment concerns, and
+                            real delivery accountability without a lot of hand-holding.
+                        </p>
+                        <a class="button button-primary" href="mailto:havishwaran@pjktechsolutions.com">Email Me</a>
+                    </article>
+
+                    <div class="contact-grid">
+                        <a class="contact-card" data-reveal href="mailto:havishwaran@pjktechsolutions.com">
+                            <span class="contact-label">Email</span>
+                            <strong>havishwaran@pjktechsolutions.com</strong>
+                            <span>Best for project discussions and opportunities.</span>
+                        </a>
+                        <a class="contact-card" data-reveal href="https://www.pjktechsolutions.com" target="_blank" rel="noreferrer">
+                            <span class="contact-label">Website</span>
+                            <strong>www.pjktechsolutions.com</strong>
+                            <span>Visit the company site for business details and service information.</span>
+                        </a>
+                        <a class="contact-card" data-reveal href="tel:+919655390115">
+                            <span class="contact-label">Phone</span>
+                            <strong>+91 96553 90115</strong>
+                            <span>Available for direct business and freelance conversations.</span>
+                        </a>
+                        <a class="contact-card" data-reveal href="https://www.linkedin.com/in/havishwaran-jeyakumar-97768818b/" target="_blank" rel="noreferrer">
+                            <span class="contact-label">LinkedIn</span>
+                            <strong>Connect professionally</strong>
+                            <span>See experience updates and stay in touch for opportunities.</span>
+                        </a>
+                        <a class="contact-card" data-reveal href="https://github.com/Havish123" target="_blank" rel="noreferrer">
+                            <span class="contact-label">GitHub</span>
+                            <strong>Havish123</strong>
+                            <span>Explore more code, experiments, and side projects.</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-shell">
+            <p>&copy; <span id="year"></span> Havishwaran J. Built with HTML, CSS, and JavaScript.</p>
+            <a href="#top">Back to top</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
+
