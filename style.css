@@ -684,6 +684,13 @@ a:focus-visible {
     margin-top: 1rem;
 }
 
+.company-story a {
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 .offer-list {
     display: grid;
     gap: 0.95rem;
@@ -727,6 +734,7 @@ a:focus-visible {
 
 .contact-card {
     display: block;
+    min-width: 0;
     padding: 1.35rem;
     border-radius: 1.45rem;
 }
@@ -735,8 +743,10 @@ a:focus-visible {
     display: block;
     margin: 0.75rem 0 0.45rem;
     font-family: "Space Grotesk", sans-serif;
-    font-size: 1.15rem;
+    font-size: clamp(1rem, 2vw, 1.15rem);
     line-height: 1.2;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .contact-card span:last-child {
